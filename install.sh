@@ -34,6 +34,8 @@ fi
 # ============================================================
 # 以下はお好みで有効化（コメントアウトを外す）
 # ============================================================
+sudo apt-get update
+
 
 # --- zsh + Oh My Zsh ---
 # sudo apt-get update -qq && sudo apt-get install -y -qq zsh
@@ -43,5 +45,9 @@ fi
 #     git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # fi
 
+# --- tmux ---
+sudo apt-get install -y -qq tmux
+echo "[dotfiles] tmux installed/updated"
+
 # --- 便利ツール ---
-# sudo apt-get update -qq && sudo apt-get install -y -qq ripgrep fd-find tree tmux
+# sudo apt-get update -qq && sudo apt-get install -y -qq ripgrep fd-find tree
