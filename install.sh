@@ -49,5 +49,11 @@ sudo apt-get update
 sudo apt-get install -y -qq tmux
 echo "[dotfiles] tmux installed/updated"
 
+# --- シンボリックリンク ---
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
+echo "[dotfiles] .tmux.conf symlinked"
+
 # --- 便利ツール ---
 # sudo apt-get update -qq && sudo apt-get install -y -qq ripgrep fd-find tree
